@@ -1,0 +1,76 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  DNS + TLS probes run directly against 4info.com and www.4info.com on 2026-09-05
+  (dig for A/AAAA/CNAME/MX/TXT/CAA/DNSKEY/DS/_dmarc, curl for HTTPS).
+name: 4Info
+slug: 4info
+summary: >-
+  4info.com is a registered, actively delegated domain that is still used for EMAIL only.
+  It publishes no A or AAAA record on the apex or on www, so there is no web host to probe
+  for TLS, HSTS, or any HTTP surface at all. Mail is routed through Proofpoint and the
+  domain carries SPF and DMARC records, which is consistent with the domain being retained
+  by the acquirer (Cadent, January 2020) for mail continuity after the website was retired.
+registrable_domain: 4info.com
+hosts:
+- host: 4info.com
+  dns:
+    a: []
+    aaaa: []
+    cname: []
+    resolves_to_address: false
+    note: >-
+      Authoritative NOERROR with an empty answer section for A and AAAA — the zone exists
+      and is delegated to AWS Route 53 (ns-219.awsdns-27.com, ns-815.awsdns-37.net,
+      ns-1382.awsdns-44.org, ns-1863.awsdns-40.co.uk) but publishes no address record.
+  https:
+    reachable: false
+    http_status: 0
+    error: 'curl (6) Could not resolve host: 4info.com'
+    tls_version: null
+    cert_expires: null
+    hsts: null
+- host: www.4info.com
+  dns:
+    a: []
+    aaaa: []
+    cname: []
+    resolves_to_address: false
+  https:
+    reachable: false
+    http_status: 0
+    error: 'curl (6) Could not resolve host: www.4info.com'
+    tls_version: null
+    cert_expires: null
+    hsts: null
+domain:
+  dnssec:
+    dnskey: false
+    ds: false
+    note: No DNSKEY at the zone apex and no DS at the parent — the zone is unsigned.
+  caa:
+    present: false
+    records: []
+    note: No CAA record — certificate issuance is not restricted to a named CA.
+  spf:
+    present: true
+    record: 'v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com -all'
+    policy: hard-fail
+    note: Proofpoint macro-expanded SPF include with a -all hard fail.
+  dmarc:
+    present: true
+    record: 'v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;'
+    policy: none
+    note: >-
+      p=none is monitor-only — reports are collected by Proofpoint Email Defense but no
+      enforcement is requested on failing mail.
+  mx:
+    present: true
+    records:
+    - '10 mxa-003bca01.gslb.pphosted.com.'
+    - '10 mxb-003bca01.gslb.pphosted.com.'
+    provider: Proofpoint (pphosted.com)
+findings:
+- The domain is alive for mail and dead for web; there is no HTTPS endpoint to assess.
+- DNSSEC is not enabled and no CAA record is published.
+- SPF and DMARC are both published; DMARC is at p=none (monitoring only).

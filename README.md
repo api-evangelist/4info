@@ -64,5 +64,39 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-4Info is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/4info_stock/
+4INFO, Inc. was a San Mateo, California advertising-technology company founded in 2004 by Pankaj
+Shah and Zaw Thet. It started as an SMS content and alerting service — Nielsen called it the
+largest business-to-consumer SMS content provider in North America in 2008 — and pivoted in 2010
+into mobile display advertising with the **AdHaven** platform (mobile ad server, audience
+data-management and analytics). Its final product was an **identity graph** that statistically
+resolved mobile devices, set-top boxes and connected TVs back to a household for cross-screen
+targeting and measurement.
+
+mBlox acquired the legacy SMS business in 2015. **Cadent acquired 4INFO in January 2020** and
+folded the identity and cross-screen technology into its advanced-TV platform.
+
+## Why this profile is thin
+
+4INFO no longer operates as an independent company, and **there is no 4Info web surface left to
+profile**. Probed 2026-09-05:
+
+| Probe | Result |
+|---|---|
+| `https://4info.com/` | `000` — no A/AAAA record; DNS resolution fails |
+| `https://www.4info.com/` | `000` — no A/AAAA record |
+| 11 `/.well-known/*`, `/llms.txt`, `/openapi.json`, `/swagger.json` paths × 2 hosts | all `000` |
+| Last Internet Archive capture of the site | 2023-02-02; the next capture (2023-05-28) is a `404` |
+| `github.com/4info` | `200` — org exists ("4info Organization (Cadent)"), 1 public repo, a fork of `aerospike-loader` |
+| npm / PyPI | no 4Info-published packages |
+
+The domain is still delegated to Route 53 and carries live Proofpoint MX, SPF and DMARC records —
+it is retained for **email only**. That posture is captured in
+[`security/4info-domain-security.yml`](security/4info-domain-security.yml), and the recorded
+absence of every discovery document in
+[`well-known/4info-well-known.yml`](well-known/4info-well-known.yml).
+
+The `forgeglobal.com/4info_stock/` URL this record was harvested from is a third-party
+secondary-market venue listing, **not** 4Info's web presence, so it is recorded as
+`x-harvest-source-url` rather than as a `Website` pointer.
+
+`x-coverage: none / defunct`

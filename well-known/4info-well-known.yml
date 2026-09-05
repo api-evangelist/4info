@@ -1,0 +1,109 @@
+generated: '2026-09-05'
+method: probed
+source: Direct HTTPS probes of the named /.well-known paths on every host this record knows, 2026-09-05.
+name: 4Info
+slug: 4info
+summary: 'Every named discovery path was probed on both 4info.com hosts and none could be requested at
+  all: the domain publishes no A or AAAA record, so DNS resolution fails before any HTTP request is made.
+  This is a recorded ABSENCE, not a served surface — no WellKnown, SecurityTxt, APICatalog or AgentCard
+  pointer is emitted from it.'
+hosts_probed_note: No API host, developer portal, docs host or console host exists for this company, so
+  the registrable domain and its www host are the complete host list. forgeglobal.com is a third-party
+  secondary-market venue listing, not a 4Info host, and was deliberately not probed as one.
+hosts:
+- host: 4info.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for 4info.com
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for 4info.com
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for 4info.com
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for 4info.com
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for 4info.com
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for 4info.com
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for 4info.com
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for 4info.com
+  - path: /llms.txt
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for 4info.com
+  - path: /openapi.json
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for 4info.com
+  - path: /swagger.json
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for 4info.com
+- host: www.4info.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for www.4info.com
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for www.4info.com
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for www.4info.com
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for www.4info.com
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for www.4info.com
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for www.4info.com
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for www.4info.com
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for www.4info.com
+  - path: /llms.txt
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for www.4info.com
+  - path: /openapi.json
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for www.4info.com
+  - path: /swagger.json
+    status: 0
+    file: null
+    note: host does not resolve — no A/AAAA record for www.4info.com
+result:
+  documents_found: 0
+  agent_card_found: false
+  note: Nothing served. No common[] pointer emitted (see pipeline-enrich.md STEP 1.2).
