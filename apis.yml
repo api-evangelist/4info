@@ -1,47 +1,42 @@
 aid: 4info
 name: 4Info
-description: >-
-  4INFO, Inc. was a San Mateo (originally Palo Alto) California advertising-technology company
-  founded in 2004 by Pankaj Shah and Zaw Thet. It began as an SMS content and alerting service —
-  Nielsen called it the largest business-to-consumer SMS content provider in North America in 2008 —
-  then pivoted in 2010 into mobile display advertising with the AdHaven platform, a mobile ad
-  server, audience data-management and analytics stack sold to publishers, aggregators and
-  national advertisers. Its later product was an identity graph: patented technology
-  ("Systems and methods for statistically associating mobile devices to households") that
-  statistically resolved mobile devices, set-top boxes and connected TVs back to a single
-  household so brands could target and measure across screens. mBlox bought the legacy SMS
-  business in 2015, and Cadent acquired the remaining company in January 2020, folding the
-  identity and cross-screen targeting technology into Cadent's advanced-TV platform. 4INFO no
-  longer operates as an independent company: 4info.com is retained for email only and publishes
-  no A or AAAA record, so there is no website, developer portal, API reference or machine-readable
-  contract of any kind on any 4Info host, live or archived.
+description: '4INFO, Inc. was a San Mateo (originally Palo Alto) California advertising-technology company
+  founded in 2004 by Pankaj Shah and Zaw Thet. It began as an SMS content and alerting service — Nielsen
+  called it the largest business-to-consumer SMS content provider in North America in 2008 — then pivoted
+  in 2010 into mobile display advertising with the AdHaven platform, a mobile ad server, audience data-management
+  and analytics stack sold to publishers, aggregators and national advertisers. Its later product was
+  an identity graph: patented technology ("Systems and methods for statistically associating mobile devices
+  to households") that statistically resolved mobile devices, set-top boxes and connected TVs back to
+  a single household so brands could target and measure across screens. mBlox bought the legacy SMS business
+  in 2015, and Cadent acquired the remaining company in January 2020, folding the identity and cross-screen
+  targeting technology into Cadent''s advanced-TV platform. 4INFO no longer operates as an independent
+  company: 4info.com is retained for email only and publishes no A or AAAA record, so there is no website,
+  developer portal, API reference or machine-readable contract of any kind on any 4Info host, live or
+  archived.'
 url: https://raw.githubusercontent.com/api-evangelist/4info/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
 x-harvest-source-url: https://forgeglobal.com/4info_stock/
 x-tier: stub
 x-tier-reason: defunct-no-api-surface
-x-status: acquired
+x-status: defunct
 x-founded: '2004-09-08'
 x-acquired-by: Cadent
 x-acquired-date: '2020-01-02'
-x-acquisition-note: >-
-  Cadent announced the acquisition of 4INFO on 2 January 2020; all 30 4INFO employees joined
-  Cadent. The GitHub organization github.com/4info is still named "4info Organization (Cadent)".
-  Cadent's own surface (cadent.com) is a separate company record and is deliberately NOT wired
-  here as a 4Info property.
+x-acquisition-note: Cadent announced the acquisition of 4INFO on 2 January 2020; all 30 4INFO employees
+  joined Cadent. The GitHub organization github.com/4info is still named "4info Organization (Cadent)".
+  Cadent's own surface (cadent.com) is a separate company record and is deliberately NOT wired here as
+  a 4Info property.
 x-domain-status: mail-only
-x-domain-note: >-
-  4info.com is delegated to AWS Route 53 and carries live Proofpoint MX, SPF and DMARC records,
-  but publishes NO A or AAAA record on the apex or on www — every HTTP request fails at DNS
-  resolution (curl exit 6, status 000). The last Internet Archive capture of the site is
-  2023-02-02 and the following capture, 2023-05-28, was a 404. There is no host to wire as a
-  Website pointer. The forgeglobal.com/4info_stock/ URL this record was harvested from is a
-  third-party secondary-market venue listing, not 4Info's web presence, so it is recorded as
-  x-harvest-source-url rather than as a Website pointer (roadmap#56).
+x-domain-note: 4info.com is delegated to AWS Route 53 and carries live Proofpoint MX, SPF and DMARC records,
+  but publishes NO A or AAAA record on the apex or on www — every HTTP request fails at DNS resolution
+  (curl exit 6, status 000). The last Internet Archive capture of the site is 2023-02-02 and the following
+  capture, 2023-05-28, was a 404. There is no host to wire as a Website pointer. The forgeglobal.com/4info_stock/
+  URL this record was harvested from is a third-party secondary-market venue listing, not 4Info's web
+  presence, so it is recorded as x-harvest-source-url rather than as a Website pointer (roadmap#56).
 specificationVersion: '0.23'
 created: '2026-09-05'
-modified: '2026-09-05'
+modified: '2026-09-15'
 tags:
 - Company
 - Advertising
@@ -72,11 +67,10 @@ x-enrichment:
 x-coverage:
   state: none
   reason: defunct
-  detail: >-
-    4INFO was fully absorbed into Cadent in January 2020 and its domain is now mail-only —
-    4info.com and www.4info.com publish no A or AAAA record at all, so every HTTP and
-    /.well-known probe fails at DNS resolution rather than returning a page, and the last
-    Internet Archive capture of the site (2023-02) is followed by a 404.
+  detail: 4INFO was fully absorbed into Cadent in January 2020 and its domain is now mail-only — 4info.com
+    and www.4info.com publish no A or AAAA record at all, so every HTTP and /.well-known probe fails at
+    DNS resolution rather than returning a page, and the last Internet Archive capture of the site (2023-02)
+    is followed by a 404.
   evidence:
   - url: https://4info.com/
     status: 0
