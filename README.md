@@ -64,39 +64,44 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-4INFO, Inc. was a San Mateo, California advertising-technology company founded in 2004 by Pankaj
-Shah and Zaw Thet. It started as an SMS content and alerting service — Nielsen called it the
-largest business-to-consumer SMS content provider in North America in 2008 — and pivoted in 2010
-into mobile display advertising with the **AdHaven** platform (mobile ad server, audience
-data-management and analytics). Its final product was an **identity graph** that statistically
-resolved mobile devices, set-top boxes and connected TVs back to a household for cross-screen
-targeting and measurement.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-mBlox acquired the legacy SMS business in 2015. **Cadent acquired 4INFO in January 2020** and
-folded the identity and cross-screen technology into its advanced-TV platform.
+4INFO, Inc. was a San Mateo (originally Palo Alto) California advertising-technology company founded in 2004 by Pankaj Shah and Zaw Thet. It began as an SMS content and alerting service — Nielsen called it the largest business-to-consumer SMS content provider in North America in 2008 — then pivoted in 2010 into mobile display advertising with the AdHaven platform, a mobile ad server, audience data-management and analytics stack sold to publishers, aggregators and national advertisers. Its later product was an identity graph: patented technology ("Systems and methods for statistically associating mobile devices to households") that statistically resolved mobile devices, set-top boxes and connected TVs back to a single household so brands could target and measure across screens. mBlox bought the legacy SMS business in 2015, and Cadent acquired the remaining company in January 2020, folding the identity and cross-screen targeting technology into Cadent's advanced-TV platform. 4INFO no longer operates as an independent company: 4info.com is retained for email only and publishes no A or AAAA record, so there is no website, developer portal, API reference or machine-readable contract of any kind on any 4Info host, live or archived.
 
-## Why this profile is thin
+**Areas:** Company · Advertising · AdTech · Mobile Advertising · Advanced TV · Identity Resolution · Audience Targeting · Data · Acquired · Defunct
 
-4INFO no longer operates as an independent company, and **there is no 4Info web surface left to
-profile**. Probed 2026-09-05:
+## 4Info on APIs.io (historical record)
 
-| Probe | Result |
-|---|---|
-| `https://4info.com/` | `000` — no A/AAAA record; DNS resolution fails |
-| `https://www.4info.com/` | `000` — no A/AAAA record |
-| 11 `/.well-known/*`, `/llms.txt`, `/openapi.json`, `/swagger.json` paths × 2 hosts | all `000` |
-| Last Internet Archive capture of the site | 2023-02-02; the next capture (2023-05-28) is a `404` |
-| `github.com/4info` | `200` — org exists ("4info Organization (Cadent)"), 1 public repo, a fork of `aerospike-loader` |
-| npm / PyPI | no 4Info-published packages |
+Everything profiled for 4Info is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/4info/](https://apis.io/providers/4info/)** — or go straight to one of the APIs or properties below.
 
-The domain is still delegated to Route 53 and carries live Proofpoint MX, SPF and DMARC records —
-it is retained for **email only**. That posture is captured in
-[`security/4info-domain-security.yml`](security/4info-domain-security.yml), and the recorded
-absence of every discovery document in
-[`well-known/4info-well-known.yml`](well-known/4info-well-known.yml).
+### Published properties
 
-The `forgeglobal.com/4info_stock/` URL this record was harvested from is a third-party
-secondary-market venue listing, **not** 4Info's web presence, so it is recorded as
-`x-harvest-source-url` rather than as a `Website` pointer.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-`x-coverage: none / defunct`
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [4Info Domain Security](https://apis.io/security/4info/4info-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [GitHub](https://github.com/4info)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for 4Info: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/4info/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
